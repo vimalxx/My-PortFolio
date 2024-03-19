@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
+
+nav {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  background-color: grey;
+  color: black;
+}
+
+#home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.intro-text {
+  text-align: center;
+  color: white;
+}
+
+.intro-text h1 {
+  font-size: 36px;
+}
+
+.intro-text span {
+  color: hwb(120 23% 13%);
+}
+
+.intro-text p {
+  font-size: 20px;
+  color: white;
+}
+#projects {
+  background-color: #333; /* Change background color */
+  padding: 50px 0;
+  color: black;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 1px;
+  width: 300px;
+  max-height: 400px;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 50%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.contact-card {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-card h2 {
+  color: black;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

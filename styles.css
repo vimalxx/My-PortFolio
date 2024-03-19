@@ -76,8 +76,17 @@ nav ul li a:hover {
 }
 #projects {
   background-color: #333; /* Change background color */
-  padding: 50px 0;
+  padding: 40px 0;
   color: black;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 100%; /* Adjust as needed */
+  margin: 0;
 }
 
 .project-card {
@@ -86,38 +95,38 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 1px;
-  width: 300px;
-  max-height: 400px;
+  overflow: hidden;
+  width: 350px;
+  max-height: 100vh;
   text-align: center;
 }
 
 .project-card img {
   width: 100%;
-  max-height: 50%;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  height: auto;
+  border-radius: 8px 8px 0 0;
 }
 
 .project-card h3 {
   font-size: 20px;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  padding-bottom: 1rem;
 }
 
 .project-card p {
   font-size: 16px;
-  margin-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .btn {
-  background-color: #007bff;
+  display: inline-block;
+  background-color: #007bff; /* Change button color as needed */
   color: #fff;
-  border: none;
+  text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
-  text-decoration: none;
   transition: background-color 0.3s ease;
 }
-
 .btn:hover {
   background-color: #0056b3;
 }

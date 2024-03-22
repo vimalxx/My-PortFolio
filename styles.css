@@ -52,7 +52,7 @@ nav ul li a:hover {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
 }
@@ -75,17 +75,17 @@ nav ul li a:hover {
   color: white;
 }
 #projects {
-  background-color: #333; /* Change background color */
+  background-color: #333;
   padding: 40px 0;
   color: black;
 }
 
 .project-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: stretch;
   flex-wrap: nowrap;
-  max-width: 100%; /* Adjust as needed */
+  max-width: 100%;
   margin: 0;
 }
 
@@ -120,15 +120,39 @@ nav ul li a:hover {
 
 .btn {
   display: inline-block;
-  background-color: #007bff; /* Change button color as needed */
-  color: #fff;
+  background-color: #007bff;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
+  margin-bottom: 1rem;
   transition: background-color 0.3s ease;
 }
 .btn:hover {
   background-color: #0056b3;
+}
+
+#about {
+  padding: 2rem 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.description {
+  width: 50%;
+}
+
+.photo {
+  width: 40%;
+}
+
+.photo img {
+  width: 100%;
+  max-height: 40%;
+  border-radius: 1rem;
 }
 
 .contact-card {
@@ -136,8 +160,8 @@ nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 30px;
-  max-width: 500px;
-  width: 100%;
+  width: 400px;
+  /* width: 100%; */
 }
 
 .contact-card h2 {

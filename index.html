@@ -13,12 +13,18 @@
   <body>
     <nav>
       <ul>
-        <li><a href="#home" onclick="smoothScroll('home')">Home</a></li>
+        <li>
+          <a href="#home" onclick="smoothScroll('home')">Home</a>
+        </li>
         <li>
           <a href="#projects" onclick="smoothScroll('projects')">Projects</a>
         </li>
-        <li><a href="#resume" onclick="smoothScroll('resume')">Resume</a></li>
-        <li><a href="#about" onclick="smoothScroll('about')">About</a></li>
+        <li>
+          <a href="#resume" onclick="smoothScroll('resume')">Resume</a>
+        </li>
+        <li>
+          <a href="#about" onclick="smoothScroll('about')">About</a>
+        </li>
         <li>
           <a href="#contact" onclick="smoothScroll('contact')">Contact</a>
         </li>
@@ -35,7 +41,14 @@
     </section>
 
     <section id="projects">
-      <h2 style="color: white; padding-bottom: 2rem; text-align: center">
+      <h2
+        style="
+          color: white;
+          font-size: 2.5rem;
+          padding-bottom: 2rem;
+          text-align: center;
+        "
+      >
         Projects
       </h2>
       <div class="project-container">
@@ -46,22 +59,45 @@
             A real estate website in which the user can buy, sell, or rent the
             property.
           </p>
-          <a href="#" class="btn">View Details</a>
+          <a href="https://realtyking.vercel.app/" class="btn" target="_blank">
+            View Details
+          </a>
         </div>
 
         <div class="project-card">
           <img src="images/cc.png" alt="Another Project" />
           <h3>Another Project</h3>
           <p>Description of another project goes here.</p>
-          <a href="#" class="btn" target="_blank">View Details</a>
+          <a
+            href="https://github.com/vimalxx/currency-converter"
+            class="btn"
+            target="_blank"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="container">
+        <div class="resume-content">
+        div
         </div>
       </div>
     </section>
 
     <section id="about">
       <div class="container">
-        <h2>About Me</h2>
-        <p>Write about yourself here.</p>
+        <div class="about-content">
+          <div class="description">
+            <h2>About Me</h2>
+            <p>Write about yourself here.</p>
+          </div>
+          <div class="photo">
+            <img src="images/My-photo.jpg" alt="Your Photo" />
+          </div>
+        </div>
       </div>
     </section>
 

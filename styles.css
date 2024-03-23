@@ -14,34 +14,54 @@ body {
 
 nav {
   background-color: transparent;
-  transition: background-color 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
 }
 
-nav ul {
+.nav-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.nav-menu {
   list-style-type: none;
   padding: 0;
-  background-color: transparent;
-  text-align: center;
+  margin: 0;
+  display: flex;
 }
 
-nav ul li {
-  display: inline;
+.nav-menu li {
+  margin-right: 20px;
 }
 
-nav ul li a {
-  display: inline-block;
-  padding: 10px 20px;
+.nav-menu li a {
   text-decoration: none;
   color: white;
 }
 
-nav ul li a:hover {
-  background-color: grey;
-  color: black;
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
 }
 
 #home {
@@ -83,10 +103,11 @@ nav ul li a:hover {
 .project-container {
   display: flex;
   justify-content: space-evenly;
-  align-items: stretch;
+  align-items: center;
   flex-wrap: nowrap;
-  max-width: 100%;
+  width: 100%;
   margin: 0;
+  height: 100vh;
 }
 
 .project-card {
@@ -97,7 +118,6 @@ nav ul li a:hover {
   padding: 1px;
   overflow: hidden;
   width: 350px;
-  max-height: 100vh;
   text-align: center;
 }
 
@@ -124,6 +144,7 @@ nav ul li a:hover {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
+  color: white;
   margin-bottom: 1rem;
   transition: background-color 0.3s ease;
 }
@@ -160,8 +181,9 @@ nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 30px;
-  width: 400px;
-  /* width: 100%; */
+  max-width: 400px;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .contact-card h2 {
@@ -190,15 +212,36 @@ textarea {
   border-radius: 5px;
 }
 
-button {
+form button {
   background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
 }
 
-button:hover {
+form button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 8px;
+  }
+
+  form button {
+    padding: 8px;
+  }
 }

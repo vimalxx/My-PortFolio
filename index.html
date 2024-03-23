@@ -12,23 +12,22 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li>
-          <a href="#home" onclick="smoothScroll('home')">Home</a>
-        </li>
-        <li>
-          <a href="#projects" onclick="smoothScroll('projects')">Projects</a>
-        </li>
-        <li>
-          <a href="#resume" onclick="smoothScroll('resume')">Resume</a>
-        </li>
-        <li>
-          <a href="#about" onclick="smoothScroll('about')">About</a>
-        </li>
-        <li>
-          <a href="#contact" onclick="smoothScroll('contact')">Contact</a>
-        </li>
-      </ul>
+      <div class="nav-container">
+        <div class="nav-header">
+          <a href="#home" class="nav-brand">My PortFolio</a>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <section id="home" style="background-image: url(images/joker.jpg)">
@@ -41,14 +40,7 @@
     </section>
 
     <section id="projects">
-      <h2
-        style="
-          color: white;
-          font-size: 2.5rem;
-          padding-bottom: 2rem;
-          text-align: center;
-        "
-      >
+      <h2 style="color: white; font-size: 2.4rem; text-align: center">
         Projects
       </h2>
       <div class="project-container">
@@ -66,8 +58,8 @@
 
         <div class="project-card">
           <img src="images/cc.png" alt="Another Project" />
-          <h3>Another Project</h3>
-          <p>Description of another project goes here.</p>
+          <h3>Currency Converter</h3>
+          <p>To convert from one currency to another currency.</p>
           <a
             href="https://github.com/vimalxx/currency-converter"
             class="btn"
@@ -75,14 +67,6 @@
           >
             View Details
           </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="resume">
-      <div class="container">
-        <div class="resume-content">
-        div
         </div>
       </div>
     </section>
@@ -101,7 +85,7 @@
       </div>
     </section>
 
-    <section id="contact" style="background-color: #333">
+    <section id="contact">
       <div class="container">
         <div class="contact-card">
           <h2>Contact Me</h2>
@@ -148,14 +132,6 @@
         alert("The form has been submitted!");
 
         document.getElementById("contact-form").reset();
-      }
-
-      function smoothScroll(target) {
-        const element = document.getElementById(target);
-        window.scrollTo({
-          top: element.offsetTop,
-          behavior: "smooth",
-        });
       }
     </script>
   </body>

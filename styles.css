@@ -58,11 +58,75 @@ nav {
   color: white;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .nav-menu {
     display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background: white;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-toggle .hamburger::before,
+  .nav-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-toggle .hamburger::before {
+    top: -8px;
+  }
+
+  .nav-toggle .hamburger::after {
+    bottom: -8px;
+  }
+
+  .nav-toggle.active .hamburger {
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle.active .hamburger::before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  .nav-toggle.active .hamburger::after {
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 }
+
+.nav-menu li a:hover {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
 
 #home {
   background-repeat: no-repeat;
@@ -136,6 +200,11 @@ nav {
 .project-card p {
   font-size: 16px;
   padding-bottom: 1rem;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
 .btn {

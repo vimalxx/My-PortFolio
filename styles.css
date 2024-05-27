@@ -229,20 +229,44 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .description {
-  width: 50%;
+  width: 60%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.description h2 {
+  padding-bottom: 1rem;
 }
 
 .photo {
-  width: 40%;
+  width: 35%;
+  max-width: 350px;
 }
 
 .photo img {
   width: 100%;
-  max-height: 40%;
   border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center; /* Centers items on smaller screens */
+  }
+
+  .description,
+  .photo {
+    width: 90%;
+  }
+
+  .photo img {
+    max-width: 100%;
+  }
 }
 
 .contact-card {
@@ -314,3 +338,10 @@ form button:hover {
     padding: 8px;
   }
 }
+
+footer {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+} 
